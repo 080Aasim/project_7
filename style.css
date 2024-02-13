@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --ff: Work Sans;
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --p-size: 16px
+}
+
+/* ********************************************************************************************************************************************************** */
+
+.pad{
+    padding-top: 20px;
+}
+
+.minus{
+    transition: opacity .2s;
+}
+
+.plus{
+    position: absolute;
+    right: 5.7%;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.op-0{
+    opacity: 0;
+}
+
+.op-1{
+    opacity: 1;
+}
+
+
+
+/* ************************************************************************************************************************************************************ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Light-pink);
+
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.container{
+    width: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.top{
+    display: flex;
+    gap: 20px;
+}
+
+h1{
+    font-size: 40px;
+    font-family: var(--ff);
+    font-weight: 800;
+}
+
+.accordion{
+    padding-top: 20px;
+    margin-top: 14px;
+    border-top: 1px solid hsla(292, 16%, 49% , 0.2);
+}
+
+.accordion:hover{
+    color: purple;
+}
+
+.question{
+    font-size: 13px;
+    font-family: var(--ff);
+    font-weight: 100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.answer{
+    font-size: 16px;
+    color: #666;
+    height: 0;
+    overflow: hidden;
+}
+
+.answer.active{
+    height: fit-content;
+}
+
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+
+/* *************************************************************** */
+
+@media (max-width:376px) {
+
+
+
+    .container{
+        width: 320px;
+        top: 60%;
+    }
+
+    .accordion h2{
+        font-size: 14px;
+    }
+
+    .plus{
+        position: absolute;
+        right: 8.5%;
+    }
+}
+
+
+
